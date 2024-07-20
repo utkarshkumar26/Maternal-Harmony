@@ -1,0 +1,375 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        .gradient-custom {
+            background: linear-gradient(to right bottom, rgb(227, 88, 183), rgb(54, 3, 96));
+
+        }
+
+        .col-md-8 {
+            background-color: rgb(238, 175, 220);
+        }
+
+
+        #top {
+            background-image: linear-gradient(45deg, rgb(235, 97, 38), rgb(236, 120, 188));
+            padding: 8px;
+            height: 50px;
+            width: 1289px;
+            position: relative;
+            /* position: fixed; */
+            top: -5px;
+
+        }
+
+        #flag {
+            color: aliceblue;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flagimage {
+            padding: 3px;
+            height: 28px;
+            width: 40px;
+            position: absolute;
+            top: 14px;
+        }
+
+        .flagtext {
+            position: absolute;
+            left: 60px;
+            top: 15px;
+            font-size: 18px;
+        }
+
+        .upper {
+            position: absolute;
+            right: 35px;
+            top: 11px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 180px;
+        }
+
+        .follow {
+            height: 55px;
+            width: 55px;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            /* right: 35px; */
+            top: -12px;
+            right: -1px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 5px;
+
+        }
+
+        #logos {
+            margin-top: 40px;
+            background-color: rgb(239, 126, 194);
+            height: 180px;
+            width: 50px;
+        }
+
+        .langu {
+            height: 55px;
+            width: 55px;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            /* right: 35px; */
+            top: -12px;
+            right: 230px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2px;
+            background-color: green;
+            color: #fff;
+            position: fixed;
+            bottom: 1px;
+            width: 100%;
+            height: 25px;
+        }
+
+        .foot {
+            position: relative;
+            margin-top: -1px;
+        }
+
+        #bg {
+            height: 700px;
+            width: 1280px;
+            position: fixed;
+            top: 45px;
+        }
+
+        #sift {
+            position: relative;
+            position: fixed;
+            top: 10px;
+            width: 100vw;
+        }
+
+        #itemlink {
+            position: relative;
+            /* position: fixed; */
+            color: #fff;
+            top: 240px;
+            left: 12px;
+            font-weight: bold;
+        }
+
+        #linking {
+            background-color: rgb(180, 90, 212);
+            border: 3px solid rgb(244, 86, 107);
+            border-radius: 4px;
+            position: relative;
+            top: 370px;
+            left: 140px;
+            height: 30px;
+            width: 80px;
+            padding-left: 14px;
+            padding-top: -25px;
+        }
+
+        #color {
+            color: antiquewhite;
+        }
+
+        .leftedit {
+            font-size: 20px;
+            color: rgb(2, 26, 27);
+        }
+
+        .rightlog {
+            font-size: 15px;
+            margin-left: 80px;
+            background-color: rgb(221, 71, 121);
+            border: 3px solid purple;
+            border-radius: 12px;
+            width: 90px;
+            padding-left: 10px;
+            position: relative;
+            top: 15px;
+
+        }
+
+        #log {
+            color: rgb(2, 26, 27);
+            text-decoration: none;
+        }
+
+        #healthlink {
+            position: relative;
+            color: #fff;
+            top: 286px;
+            left: 940px;
+            font-weight: bold;
+            position: fixed;
+        }
+
+        #health {
+            background-color: rgb(180, 90, 212);
+            border: 3px solid rgb(244, 86, 107);
+            border-radius: 4px;
+            position: relative;
+            top: 240px;
+            left: 1078px;
+            height: 30px;
+            width: 80px;
+            padding-left: 14px;
+            padding-top: -25px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div><img src="https://tinyurl.com/bcbnnpeu" alt="bg" id="bg"></div> -->
+
+    <div id="top">
+        <div id="flag">
+            <span>
+                <img src="https://static.mygov.in/innovateindia/images/flag.jpg" alt="image" class="flagimage">
+            </span>
+            <span>
+                <h4 class="flagtext">GOVERNMENT OF INDIA</h4>
+            </span>
+        </div>
+        <div class="upper">
+            <span><img src="http://tinyurl.com/mr28sky4" alt="image" class="langu"></span>
+            <span class="other">
+                <!-- Add this script at the beginning of your <body> tag -->
+                <div id="google_translate_element" style="position: absolute; top: 1px; right: 80.7px; z-index: 9999;">
+                </div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                            pageLanguage: 'en',
+                            includedLanguages: 'hi,bn,or,ur',
+                            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                            autoDisplay: false
+                        }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                    </script>
+            </span>
+
+            <img src="http://tinyurl.com/bdfrhnpn" onclick="toggleLogos()" alt="follow" class=follow>
+            <div class="right" id="logos" style="display: none;">
+                <span><a href="https://www.facebook.com/KIITUniversity" target="_blank"><img
+                            src="https://tinyurl.com/2ewyx25z" alt="facebook" class="logo"></a></span>
+                <span><a href="https://www.instagram.com/KIITUniversity/" target="_blank"><img
+                            src="https://tinyurl.com/5bwus5sv" alt="Instagram" class="logo"
+                            style="border-radius: 30px;"></a></span>
+                <span><a href="https://twitter.com/KIITUniversity" target="_blank"><img
+                            src="https://tinyurl.com/wxbv2y26" alt="Twitter" class="logo"></a></span>
+                <span><a href="https://www.youtube.com/channel/UC2x7DxsTyZj7XBa3hlLVPCQ" target="_blank"><img
+                            src="https://tinyurl.com/6prhybpu" alt="Youtube" class="logo"
+                            style="border-radius: 40px;"></a></span>
+            </div>
+            <script>
+                function toggleLogos() {
+                    var logosDiv = document.getElementById("logos");
+                    if (logosDiv.style.display === "none") {
+                        logosDiv.style.display = "block";
+                    } else {
+                        logosDiv.style.display = "none";
+                    }
+                }
+            </script>
+            <span><img src="http://tinyurl.com/bdfrhnpn" alt="image" class=follow></span>
+        </div>
+    </div>
+
+     <!-- <div id="itemlink">
+        <pre>    "By clicking on the Below Button Choose 
+   the Items that you get from Government."
+        </pre>
+    </div> -->
+
+   
+
+    <div id="sift">
+        <!-- <div id="linking"><a href="/items" id="color">Button</a></div>  -->
+    
+
+        <div id="linking">
+            <a href=" http://127.0.0.1:5002/" id="color">Click Here To Verified for get details of itmes</a>
+        </div>
+
+
+        <section class="vh-100">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col col-lg-6 mb-4 mb-lg-0">
+                        <div class="card mb-3" style="border-radius: .5rem;">
+                            <div class="row g-0">
+                                <div class="col-md-4 gradient-custom text-center text-white"
+                                    style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                                    <img src="userImages/<%= user_detail.image %>" alt="<%= user_detail.image %>"
+                                        class="img-fluid my-5" style="width: 80px;" />
+                                    <h5>
+                                        <%= user_detail.name %>
+                                    </h5>
+                                    <i class="far fa-edit mb-5"></i>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body p-4">
+                                        <h6>Information</h6>
+                                        <hr class="mt-0 mb-4">
+                                        <div class="row pt-1">
+                                            <div class="col-6 mb-3">
+                                                <h6>Email</h6>
+                                                <p class="text-muted">
+                                                    <%= user_detail.email %>
+                                                </p>
+                                            </div>
+                                            <div class="col-6 mb-3">
+                                                <h6>Phone</h6>
+                                                <p class="text-muted">
+                                                    <%= user_detail.mobile %>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <h6>Projects</h6>
+                                        <hr class="mt-0 mb-4">
+                                        <div class="row pt-1">
+                                            <div class="col-6 mb-3">
+                                                <h6>Recent</h6>
+                                                <p class="text-muted">Lorem ipsum</p>
+                                            </div>
+                                            <div class="col-6 mb-3">
+                                                <h6>Most Viewed</h6>
+                                                <p class="text-muted">Dolor sit amet</p>
+                                            </div>
+                                        </div>
+                                        <div class="EDIT_LOGOUT">
+                                            <h3><a href="/edit?id=<%=user_detail._id%>" class="leftedit">Click Here to
+                                                    Edit
+                                                    your Profile</a>
+                                            </h3>
+                                            <h3 class="rightlog"><a href="/logout" id="log">LOG OUT</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+       
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+            crossorigin="anonymous"></script>
+    </div>
+
+
+    <div id="healthlink">
+        <pre>    "By clicking on the Below Button 
+            Check your health."
+        </pre>
+    </div>
+    <div id="health"><a href="http://127.0.0.1:5000" id="color">Button</a></div>
+
+    <!-- <div id="sift"> -->
+
+
+
+    <footer>
+        <p style="text-align:center" class="foot">&copy; 2024 Pregnancy Support</p>
+    </footer>
+</body>
+
+</html>

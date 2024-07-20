@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About App</title>
+    <style>
+        body {
+            background: linear-gradient(90deg, pink, skyblue);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        h1 {
+            color: rgb(116, 86, 249);
+            text-align: center;
+            position: relative;
+            top: -460px;
+            font-size: 70px;
+        }
+
+        /* p {
+            font-family: verdana;
+            font-size: 20px;
+        } */
+
+        #img {
+            width: 100%;
+            height: 100vh;
+            filter: blur(1.5px);
+            /* z-index: -1; */
+        }
+
+        #head {
+            position: relative;
+            text-align: center;
+            top: -140px;
+            font-size: 70px;
+            text-decoration: underline;
+        }
+
+        #left {
+            width: 580px;
+            height: 550px;
+            border: 2px solid;
+            position: relative;
+            top: -130px;
+            font-size: 25px;
+            left: 15px;
+            padding: 20px;
+            background-color: rgb(155, 240, 247);
+        }
+
+        #right {
+
+            width: 550px;
+            border: 2px solid;
+            position: relative;
+            top: -742px;
+            font-size: 25px;
+            left: 650px;
+            background-color: pink;
+            padding: 20px;
+            height: 550px;
+        }
+
+        #video {
+            position: relative;
+            top: -340px;
+        }
+
+        #scheme {
+            position: relative;
+            top: -650px;
+            text-align: center;
+            font-size: 40px;
+            text-decoration: underline;
+            color: brown;
+        }
+
+        ul {
+            position: relative;
+            top: -650px;
+        }
+
+        #leftp {
+            width: 500px;
+            height: 580px;
+            border: 5px solid;
+            position: relative;
+            font-size: 25px;
+            left: 46px;
+            padding: 30px;
+            background-color: rgb(200, 242, 246);
+        }
+
+        #rightp {
+            width: 500px;
+            border: 5px solid;
+            position: relative;
+            top: -649px;
+            font-size: 25px;
+            left: 650px;
+            background-color: rgb(250, 228, 232);
+            padding: 30px;
+            height: 580px;
+        }
+
+        #vision {
+            text-align: center;
+            font-size: 40px;
+            text-decoration: underline;
+        }
+
+        #mission {
+            font-size: 40px;
+            text-decoration: underline;
+            text-align: center;
+
+        }
+
+        #dib {
+            width: 100%;
+            position: relative;
+            top: -600px;
+            height: 690px;
+        }
+
+        #goback {
+            font-size: 20px;
+            color: rgb(18, 21, 21);
+            margin-top: -620px;
+            margin-left: 17px;
+            padding-bottom: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        #top {
+            background-image: linear-gradient(45deg, rgb(235, 97, 38), rgb(236, 120, 188));
+            padding: 8px;
+            height: 35px;
+            width: 1264px;
+            position: relative;
+            top: -5px;
+            z-index: 1;
+        }
+
+        #flag {
+            color: aliceblue;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flagimage {
+            padding: 3px;
+            height: 28px;
+            width: 40px;
+            position: absolute;
+            top: 9px;
+        }
+
+        .flagtext {
+            position: absolute;
+            left: 60px;
+            top: -5px;
+        }
+
+        .upper {
+            position: absolute;
+            right: 35px;
+            top: 11px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 180px;
+        }
+
+        .follow {
+            height: 55px;
+            width: 55px;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            top: -12px;
+            right: -1px;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 40px;
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+
+        #logos {
+            margin-top: 40px;
+            background-color: rgb(239, 126, 194);
+            height: 180px;
+            width: 50px;
+            z-index: 0;
+        }
+
+        .langu {
+            height: 55px;
+            width: 55px;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            top: -12px;
+            right: 230px;
+        }
+        #goback {
+            font-size: 20px;
+            color: rgb(18, 21, 21);
+            /* margin-top: -4020px; */
+            /* margin-bottom: 2020px; */
+            margin-left: 17px;
+            /* padding-bottom: 15px; */
+            position: relative;
+            top: -600px;
+            font-weight: bold;
+        }
+
+        #comeup {
+            /* border: 2px solid red; */
+            /* padding: 2px; */
+            /* bottom: 500px; */
+            /* top: -500px; */
+        }
+        #problem{
+            border: 2px solid red;
+            top: -5000px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div id="top">
+        <div id="flag">
+            <span>
+                <img src="https://static.mygov.in/innovateindia/images/flag.jpg" alt="image" class="flagimage">
+            </span>
+            <span>
+                <h4 class="flagtext">GOVERNMENT OF INDIA</h4>
+            </span>
+        </div>
+        <div class="upper">
+            <span><img src="http://tinyurl.com/mr28sky4" alt="image" class="langu"></span>
+            <span class="other">
+                <!-- Add this script at the beginning of your <body> tag -->
+                <div id="google_translate_element" style="position: absolute; top: 1px; right: 80.7px; z-index: 9999;">
+                </div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                            pageLanguage: 'en',
+                            includedLanguages: 'hi,bn,or,ur',
+                            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                            autoDisplay: false
+                        }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                    </script>
+
+
+                <img src="http://tinyurl.com/bdfrhnpn" onclick="toggleLogos()" alt="follow" class=follow>
+                <div class="right" id="logos" style="display: none;">
+                    <span><a href="https://www.facebook.com/KIITUniversity" target="_blank"><img
+                                src="https://tinyurl.com/2ewyx25z" alt="facebook" class="logo"></a></span>
+                    <span><a href="https://www.instagram.com/KIITUniversity/" target="_blank"><img
+                                src="https://tinyurl.com/5bwus5sv" alt="Instagram" class="logo"
+                                style="border-radius: 30px;"></a></span>
+                    <span><a href="https://twitter.com/KIITUniversity" target="_blank"><img
+                                src="https://tinyurl.com/wxbv2y26" alt="Twitter" class="logo"></a></span>
+                    <span><a href="https://www.youtube.com/channel/UC2x7DxsTyZj7XBa3hlLVPCQ" target="_blank"><img
+                                src="https://tinyurl.com/6prhybpu" alt="Youtube" class="logo"
+                                style="border-radius: 40px;"></a></span>
+                </div>
+                <script>
+                    function toggleLogos() {
+                        var logosDiv = document.getElementById("logos");
+                        if (logosDiv.style.display === "none") {
+                            logosDiv.style.display = "block";
+                        } else {
+                            logosDiv.style.display = "none";
+                        }
+                    }
+                </script>
+
+        </div>
+    </div>
+
+
+
+    <img src="imagesContact/imagemother1.jpg" alt="img" id="img">
+    <header>
+        <h1>About App</h1>
+    </header>
+    <h2 id="head">OVERVIEW</h2>
+
+
+    <div>
+        <div id="left">
+            Under-nutrition continues to adversely affect majority of women in
+            India. In India, every third woman is undernourished and every second
+            woman is anemic. An undernourished mother almost inevitably gives
+            birth to a low birth weight baby. When poor nutrition starts in-utero,
+            it extends throughout the life cycle since the changes are largely
+            irreversible. Owing to economic and social distress many women
+            continue to work to earn a living for their family right up to the
+            last days of their pregnancy. Furthermore, they resume working soon
+            after childbirth, even though their bodies might not permit it, thus
+            preventing their bodies from fully recovering on one hand, and also
+            impeding their ability to exclusively breastfeed their young infact in
+            the first six months.From 01.01.2017, the Maternity Benefit Programme
+            is implemented in all the districts of the country. The programme is
+            named as ‘Pradhan Mantri Matru Vandana Yojana’ (PMMVY).
+        </div>
+        <br>
+        <div id="right">
+            Under PMMVY, a cash incentive of ` 5000/- is provided directly to the Bank / Post
+            Office Account of Pregnant Women and Lactating Mothers (PW&LM) for
+            first living child of the family subject to fulfilling specific
+            conditions relating to Maternal and Child Health. PMMVY is implemented
+            using the platform of Anganwadi Services scheme of Umbrella ICDS under
+            Ministry of Women and Child Development in respect of States/ UTs
+            implementing scheme through Women and Child Development Department/
+            Social Welfare Department and through Health system in respect of
+            States/ UTs where scheme is implemented by Health & Family Welfare
+            Department. PMMVY is implemented through a centrally deployed Web
+            Based MIS Software application and the focal point of implementation
+            would be the Anganwadi Centre (AWC) and ASHA workers.
+        </div>
+    </div>
+
+    <div id="video">
+        <video width="100%" height="400" controls autoplay loop muted id="video">
+            <source src="imagesContact/asha.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+    <h2 id="scheme">SCHEMES FOR PREGNANT WOMEN</h2>
+    <div id="problem">
+        <ul>
+            <li>
+                Janani Suraksha Yojana (JSY), a demand promotion and conditional
+                cash transfer scheme which aims to promote institutional delivery.
+            </li>
+            <li>
+                Janani Shishu Suraksha Karyakram (JSSK), every pregnant woman is
+                entitled to free delivery, including caesarean section, in public
+                health institutions along with the provision of free transport,
+                diagnostics, medicines, other consumables, diet & blood (if
+                required).
+            </li>
+            <li>
+                Pradhan Mantri Surakshit Matritva Abhiyan (PMSMA) provides pregnant
+                women a fixed day, free of cost assured and quality antenatal check
+                up by a Specialist/Medical Officer on the 9th day of every month.
+                Further, Extended PMSMA strategy was launched to ensure quality ANC
+                to pregnant women, especially to high-risk pregnancy (HRP) women and
+                individual HRP tracking till a safe delivery is achieved.
+            </li>
+            <li>
+                Surakshit Matritva Aashwasan (SUMAN) aims to provide assured,
+                dignified, respectful and quality healthcare at no cost and zero
+                tolerance for denial of services for every woman and newborn
+                visiting the public health facility.
+            </li>
+            <li>
+                Labour Room Quality Improvement Initiative (LaQshya) improves the
+                quality of care in labour room and maternity operation theatres to
+                ensure that pregnant women receive respectful and quality care
+                during delivery and immediate post-partum.
+            </li>
+            <li>
+                Pradhan Mantri Matru Vandana Yojana (PMMVY) is a maternity benefit
+                program run by the Ministry of Women and Child Development,
+                Government of India. The scheme aims to cover women belonging to
+                socially, economically disadvantaged and marginalised sections of
+                society. All Pregnant Women who have their pregnancy for the first
+                child in family on or after 01.01.2017 are eligible for getting
+                benefit under the programme. Further, as per the new guideline for
+                'Mission Shakti’, applicable with effect from 01.04.2022, the scheme
+                (PMMVY 2.0) seeks to promote positive behavioural change towards
+                girl child by providing additional cash incentive for the second
+                child, if that is a girl child.
+            </li>
+        </ul>
+    </div>
+
+
+    <div id="dib">
+
+    <div id="leftp">
+            <h2 id="vision">VISION</h2>
+            The vision should aim to enhance the health and well-being of individuals, families, and
+            communities by
+            accelerating the reduction of maternal, newborn, and child death and disability.Focus on the vision of
+            providing quality care for pregnant women and newborns in health facilities. This involves addressing
+            issues related to physical infrastructure, supplies, management, human resources, knowledge, skills, and
+            capacity to deal with pregnancy and childbirth effectively This approach ensures that pregnant women
+            receive respectful, dignified, and culturally sensitive care regardless of their race, ethnicity,
+            geographical location, or socioeconomic status.</p>
+        </div>
+
+
+    <div id="rightp">
+            <h2 id="mission">MISSION</h2>
+            To empower pregnant women by facilitating access to comprehensive and quality maternal,
+            newborn, and
+            child health services through collaborative efforts with governments, local and international
+            organizations, and stakeholders. The mission is to accelerate improvements in maternal, newborn, and
+            child health outcomes by leveraging existing evidence and experiences in implementing global health
+            programs. By fostering innovation, partnerships, and resilience in health systems, the project aims to
+            enhance the delivery of essential services and support for pregnant women, ultimately contributing to
+            the reduction of maternal and child mortality rates.
+        </div>
+    </div>
+    <!-- <br> -->
+    <div id="comeup">
+        <a href="/index" id="goback">Click here to Go to Home Page</a>
+    </div>
+</body>
+
+</html>

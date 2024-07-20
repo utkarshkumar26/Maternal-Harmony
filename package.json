@@ -1,0 +1,32 @@
+{
+  "name": "ums",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js -e js,hbs,ejs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.6",
+    "excel": "^1.0.1",
+    "exceljs": "^4.4.0",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "fast-two-sms": "^3.0.0",
+    "hbs": "^4.2.0",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.9",
+    "nodemon": "^3.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

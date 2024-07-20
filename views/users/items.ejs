@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItemsProvided</title>
+    <script>
+        function redirectToIndex() {
+            window.location.href = "profile.ejs";
+        }
+    </script>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+            var formData = new FormData(document.getElementById("itemForm"));
+
+            fetch("https://script.google.com/macros/s/AKfycbwqclVzRz30kIA2tAZ4IAINy9X6VIGKAAy7fF0yMHKw6F6oI5kJB_rvaPtLPxD-3YtH-w/exec", {
+                method: "POST",
+                body: formData
+            })
+                .then(response => {
+                    if (response.ok) {
+                        document.getElementById("itemForm").reset();
+                        alert("Data submitted successfully.");
+                        window.location.href = "profile"; // Redirect to profile page
+                    } else {
+                        alert("Failed to send data. Please try again.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("An error occurred while sending data.");
+                });
+        }
+
+    </script>
+
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #fitems {
+            border-top: 5px solid rgb(187, 32, 161);
+            border-bottom: 5px solid aqua;
+            border-left: 5px solid red;
+            border-right: 5px solid rgb(153, 229, 77);
+            width: 48%;
+            height: 71vh;
+            margin-top: 14px;
+            margin-left: 340px;
+            position: relative;
+            background: linear-gradient(orange, white, green);
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #food {
+            margin-left: 90px;
+        }
+
+        #medicine {
+
+            position: absolute;
+            right: 16px;
+            top: 100px;
+        }
+
+        #Dailyuse {
+            margin-left: 90px;
+            margin-top: -25px;
+        }
+
+        h3 {
+            text-decoration: underline;
+        }
+
+        #submit {
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 12px;
+            color: white;
+            background-color: #0399fd;
+            border: 4px solid rgb(36, 204, 234);
+            position: relative;
+            bottom: 80px;
+
+        }
+
+        #top {
+            background-image: linear-gradient(45deg, rgb(235, 97, 38), rgb(236, 120, 188));
+            padding: 8px;
+            height: 35px;
+            width: 1264px;
+            position: relative;
+            top: -5px;
+
+        }
+
+        #flag {
+            color: aliceblue;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flagimage {
+            padding: 3px;
+            height: 28px;
+            width: 40px;
+            position: absolute;
+            top: 9px;
+        }
+
+        .flagtext {
+            position: absolute;
+            left: 60px;
+            top: -5px;
+        }
+
+        .upper {
+            position: absolute;
+            right: 35px;
+            top: 11px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 180px;
+        }
+
+        .follow {
+            height: 55px;
+            width: 55px;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            top: -12px;
+            right: -1px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 5px;
+
+        }
+
+        #logos {
+            margin-top: 40px;
+            background-color: rgb(239, 126, 194);
+            height: 180px;
+            width: 50px;
+        }
+
+        .langu {
+            height: 55px;
+            width: 55px;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            top: -12px;
+            right: 230px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2px;
+            background-color: green;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+        }
+
+        .foot {
+            position: relative;
+            margin-top: 3px;
+        }
+
+        #itembg {
+            height: 100vh;
+            width: 26vw;
+            left: -5px;
+            position: absolute;
+            position: fixed;
+            top: -4px;
+
+        }
+
+        #bg2 {
+            height: 100vh;
+            width: 25vw;
+            left: 960px;
+            top: 38px;
+            position: fixed;
+        }
+
+        #Mark {
+            color: aqua;
+        }
+
+        #the {
+            color: brown;
+        }
+
+        #reci {
+            color: blue;
+        }
+
+        #ite {
+            color: coral;
+        }
+
+        #from {
+            color: deeppink;
+        }
+
+        #asha {
+            color: lawngreen;
+        }
+
+        #markyou {
+            font-size: 35px;
+            margin-left: 250px;
+            margin-right: 250px;
+            margin-top: 7px;
+        }
+
+        #verify {
+            position: relative;
+            top: -130px;
+            left: 236px;
+            font-weight: bold;
+
+        }
+
+        #backpage {
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 12px;
+            color: white;
+            background: linear-gradient(90deg, orange, green);
+            border: 2px solid rgb(230, 213, 252);
+            position: relative;
+            bottom: 50px;
+            left: 1070px;
+            position: fixed;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        #click {
+            position: relative;
+            top: -7px;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://tinyurl.com/34dedvtz" alt="itembg" id="itembg">
+    <img src="https://tinyurl.com/2v84zk8j" alt="bg2" id="bg2">
+
+    <div id="top">
+        <div id="flag">
+            <span>
+                <img src="https://static.mygov.in/innovateindia/images/flag.jpg" alt="image" class="flagimage">
+            </span>
+            <span>
+                <h4 class="flagtext">GOVERNMENT OF INDIA</h4>
+            </span>
+        </div>
+        <div class="upper">
+            <span><img src="http://tinyurl.com/mr28sky4" alt="image" class="langu"></span>
+            <span class="other">
+                <!-- Add this script at the beginning of your <body> tag -->
+                <div id="google_translate_element" style="position: absolute; top: 1px; right: 80.7px; z-index: 9999;">
+                </div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                            pageLanguage: 'en',
+                            includedLanguages: 'hi,bn,or,ur',
+                            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                            autoDisplay: false
+                        }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                    </script>
+
+
+                <img src="http://tinyurl.com/bdfrhnpn" onclick="toggleLogos()" alt="follow" class=follow>
+                <div class="right" id="logos" style="display: none;">
+                    <span><a href="https://www.facebook.com/KIITUniversity" target="_blank"><img
+                                src="https://tinyurl.com/2ewyx25z" alt="facebook" class="logo"></a></span>
+                    <span><a href="https://www.instagram.com/KIITUniversity/" target="_blank"><img
+                                src="https://tinyurl.com/5bwus5sv" alt="Instagram" class="logo"
+                                style="border-radius: 30px;"></a></span>
+                    <span><a href="https://twitter.com/KIITUniversity" target="_blank"><img
+                                src="https://tinyurl.com/wxbv2y26" alt="Twitter" class="logo"></a></span>
+                    <span><a href="https://www.youtube.com/channel/UC2x7DxsTyZj7XBa3hlLVPCQ" target="_blank"><img
+                                src="https://tinyurl.com/6prhybpu" alt="Youtube" class="logo"
+                                style="border-radius: 40px;"></a></span>
+                </div>
+                <script>
+                    function toggleLogos() {
+                        var logosDiv = document.getElementById("logos");
+                        if (logosDiv.style.display === "none") {
+                            logosDiv.style.display = "block";
+                        } else {
+                            logosDiv.style.display = "none";
+                        }
+                    }
+                </script>
+
+        </div>
+    </div>
+
+    <div id="markyou">
+        <marquee behavior="alternate" direction="left" scrollamount="15"><span id="Mark">Mark <span id="the">the <span
+                        id="reci">Recieved <span id="ite">Items <span id="from">From <span
+                                    id="asha">ASHA</span></span></span></span></span></span></marquee>
+    </div>
+
+
+
+    <div id="fitems">
+        <form id="itemForm"
+            action="https://script.google.com/macros/s/AKfycbwqclVzRz30kIA2tAZ4IAINy9X6VIGKAAy7fF0yMHKw6F6oI5kJB_rvaPtLPxD-3YtH-w/exec"
+            method="post" name="contact-form" onsubmit="submitForm(event)">
+            <h1><u>Items Provided by Government</u></h1>
+
+            <div class="center">
+                <center><b><label for="name">Enter your Name* :</label></b>
+                    <input type="text" name="USER_NAME" id="first_name" required>
+                </center>
+                <div id="food">
+                    <h3>Food Items : </h3>
+                    <label for="Milk">Milk</label><input type="checkbox" name="Milk" value="Milk"><br>
+                    <label for="Dates">1Kg Dates</label><input type="checkbox" name="1_KG_Dates" value="Dates"><br>
+                    <label for="Soyabean">Soyabean</label><input type="checkbox" name="Soyabean" value="Soyabean"><br>
+                    <label for="Biscuit">500 gm Protein Biscuit</label><input type="checkbox"
+                        name="500_gm_protein_Biscuit" value="Biscuit"><br>
+                    <label for="Ghee">500 gm Ghee</label><input type="checkbox" name="500_gm_Ghee" value="Ghee"><br>
+                    <label for="Pulses">Pulses</label><input type="checkbox" name="Pulses" value="Pulses"><br>
+                </div>
+
+                <div id="medicine">
+                    <h3>Medicines : </h3>
+                    <label for="tablets">Vitamin tablets </label><input type="checkbox" name="tablets"
+                        value="tablets"><br>
+                    <label for="Albendazole">3 T.Albendazole</label><input type="checkbox" name="Albendazole"
+                        value="Albendazole"><br>
+                    <label for="Folic">100 Tablets of Iron and Folic Acid </label><input type="checkbox" name="Folic"
+                        value="Folic"><br>
+                </div>
+            </div><br>
+            <div id="Dailyuse">
+                <h3>Daily Usage Items : </h3>
+                <label for="Clothes">Clothes</label><input type="checkbox" name="Clothes" value="Clothes"><br>
+                <label for="Bucket">A Plastic Bucket and Mug</label><input type="checkbox" name="Bucket"
+                    value="Bucket"><br>
+                <label for="Blanket">Blanket</label><input type="checkbox" name="Blanket" value="Blanket"><br>
+
+
+                <div id="verify">
+                    <pre>"while taking items from asha,
+   click below link to  
+    record a video."</pre>
+                    <a href="http://127.0.0.1:5003/" id="click">Click Here</a>
+                </div>
+            </div>
+            <center>
+                <input type="submit" name="submit" value="Submit" id="submit" style="cursor: pointer;">
+            </center>
+            <br>
+
+            <a href="/profile" id="backpage">Back to Profile</a>
+
+
+        </form>
+
+    </div>
+    <footer>
+        <p style="text-align:center" class="foot">&copy; 2024 Pregnancy Support</p>
+    </footer>
+
+
+</body>
+
+</html>
+
+
+
+

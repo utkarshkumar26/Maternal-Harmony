@@ -1,0 +1,143 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('../layouts/header.ejs') %>
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .left1 {
+                flex: 1;
+                text-align: left;
+                padding: 20px;
+                position: absolute;
+                top: 50%;
+                left: 2%;
+                border: 2px solid red;
+            }
+
+            .middle {
+                flex: 1;
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;
+                position: absolute;
+                top: 28%;
+                left: 14.5%;
+            }
+
+            .right1 {
+                flex: 1;
+                text-align: right;
+                padding: 20px;
+                position: absolute;
+                top: 50%;
+                right: 3%;
+                border: 2px solid red;
+            }
+
+            .box1 {
+                margin: auto;
+            }
+
+            #verify {
+                color: white;
+            }
+
+            #ashapara {
+                color: black;
+                left: 25%;
+                position: fixed;
+                font-weight: bold;
+                top: 76%;
+            }
+
+            #ashabg {
+                position: absolute;
+                top: 130px;
+                left: 0;
+                height: 90vh;
+                width: 100vw;
+                /* width: 100%;
+                height: 100%; */
+                z-index: -1;
+                position: fixed;
+                /* Ensure the background image is behind other content */
+            }
+
+            .container {
+                position: relative;
+                /* Ensure the content is positioned relative to its container */
+                z-index: 1;
+                /* Ensure the content is above the background image */
+
+            }
+
+            h3 {
+                position: fixed;
+                left: 700px;
+                top: 250px;
+                font-size: 30px;
+            }
+        </style>
+</head>
+
+<body>
+
+    <img src="https://tinyurl.com/2n8t6rd6" alt="ashaimage" id="ashabg">
+
+    <% if(typeof message !=='undefined' ) { %>
+        <h3 style="color: rgb(0, 0, 0);">
+            <%= message %>
+        </h3>
+        <% } %>
+
+            <div class="container">
+                <div class="middle">
+                    <div class="box1">
+                        <form action="/admin" method="POST">
+
+
+                            <div>
+                                <div class="box">
+                                    <h1><u>ASHA LOGIN</u></h1>
+                                    <input type="text" name="email" placeholder="Username">
+                                    <input type="password" name="password" placeholder="Password">
+                                    <input type="submit" name="btnRegister" value="Submit">
+                                    <h2><a href="/AgainuserVericationMail" id="verify">Verify Your Account</a></h2>
+                                </div>
+
+                                <div id="ashapara">
+                                    <pre>                              "The ASHA program was launched in 2005-06 as part of the National Rural Health Mission, initially
+                            in rural areas. It was later extended to urban settings with the introduction of the National
+                        Urban Health Mission in 2013.The ASHA programme was introduced as a key component  of the
+                           community process intervention and now it has emerged as the largest community health worker
+                     programme in the world and is considered a critical contribution to enabling people's 
+                            participation in health..."</pre>
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

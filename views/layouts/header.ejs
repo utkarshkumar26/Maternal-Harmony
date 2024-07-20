@@ -1,0 +1,356 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        main {
+            position: absolute;
+            flex: 5;
+            margin: 10px auto;
+            max-width: 300px;
+            height: 300px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .main_lead {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .head {
+            margin-top: -10px;
+        }
+
+        #logo {
+            height: 68px;
+
+            width: 150px;
+
+            padding: 10px;
+            margin: 8px;
+            position: absolute;
+            top: 38px;
+            left: -34px;
+        }
+
+        .down_lr {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .left {
+            width: 400px;
+            border: 2px solid red;
+            text-align: center;
+            margin-top: 200px;
+            margin-right: 80px;
+        }
+
+        .right {
+            margin-left: 420px;
+            width: 400px;
+            text-align: center;
+            margin-top: 200px;
+            border: 2px solid red;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2px;
+            background-color: green;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+        }
+
+        .foot {
+            position: relative;
+            margin-top: 3px;
+        }
+
+        /* .about {
+            font-size: 14px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border: 0;
+            padding: 20px;
+            font-weight: bold;
+
+
+        } */
+
+        /* #shiftright {
+            position: absolute;
+            top: 75px;
+            right: 20px;
+
+        } */
+
+        .navbg {
+            background-color: white;
+            min-width: 100%;
+            height: 78px;
+            padding-top: 1px;
+
+
+        }
+
+        #top {
+            background-image: linear-gradient(45deg, rgb(235, 97, 38), rgb(236, 120, 188));
+            padding: 8px;
+            height: 35px;
+
+
+
+        }
+
+        #flag {
+            color: aliceblue;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flagimage {
+            padding: 3px;
+            height: 28px;
+            width: 40px;
+            position: absolute;
+            top: 9px;
+        }
+
+        .flagtext {
+            position: absolute;
+            left: 60px;
+            top: -5px;
+        }
+
+
+
+        .upper {
+            position: absolute;
+            right: 35px;
+            top: 11px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 180px;
+        }
+
+        .follow {
+            height: 55px;
+            width: 55px;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            top: -12px;
+            right: -15px;
+            z-index: 2;
+        }
+
+        .logo {
+            width: 40px;
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 5px;
+
+        }
+
+        #logoes {
+            margin-top: 40px;
+            background-color: rgb(239, 126, 194);
+            height: 180px;
+            width: 50px;
+            margin-left: 150px;
+            /* position: absolute; */
+
+        }
+
+        .langu {
+            height: 55px;
+            width: 55px;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            top: -12px;
+            right: 230px;
+        }
+
+        ul {
+            display: flex;
+            gap: 40px;
+            justify-content: right;
+            padding: 24px;
+        }
+
+        .link {
+            position: relative;
+            list-style: none;
+            padding: px;
+        }
+
+        .link::after,
+        .link::before {
+            content: " ";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background-color: aqua;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .link::after {
+            top: 0;
+            right: 0;
+            transform-origin: right;
+        }
+
+        .link::before {
+            left: 0;
+            bottom: 0;
+            transform-origin: left;
+        }
+
+        .link:hover::after,
+        .link:hover::before {
+
+            width: 100%;
+        }
+
+        #logos {
+            background-color: aqua;
+            height: 50px;
+            width: 150px;
+            position: relative;
+            top: -25px;
+            right: 30px;
+            text-align: center;
+            padding-top: 17px;
+
+        }
+
+        .link {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top">
+        <div id="flag">
+            <span>
+                <img src="https://static.mygov.in/innovateindia/images/flag.jpg" alt="image" class="flagimage">
+            </span>
+            <span>
+                <h4 class="flagtext">GOVERNMENT OF INDIA</h4>
+            </span>
+        </div>
+        <div class="upper">
+            <span><img src="http://tinyurl.com/mr28sky4" alt="image" class="langu"></span>
+            <span class="other">
+                <!-- Add this script at the beginning of your <body> tag -->
+                <div id="google_translate_element" style="position: absolute; top: -1px; right: 57.3px; z-index: 9999;">
+                </div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                            pageLanguage: 'en',
+                            includedLanguages: 'hi,bn,or,ur',
+                            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                            autoDisplay: false
+                        }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                    </script>
+            </span>
+
+            <img src="http://tinyurl.com/bdfrhnpn" onclick="toggleLogoes()" alt="follow" class=follow>
+            <div id="logoes" style="display: none;">
+                <span><a href="https://www.facebook.com/KIITUniversity" target="_blank"><img
+                            src="https://tinyurl.com/2ewyx25z" alt="facebook" class="logo"></a></span>
+                <span><a href="https://www.instagram.com/KIITUniversity/" target="_blank"><img
+                            src="https://tinyurl.com/5bwus5sv" alt="Instagram" class="logo"
+                            style="border-radius: 30px;"></a></span>
+                <span><a href="https://twitter.com/KIITUniversity" target="_blank"><img
+                            src="https://tinyurl.com/wxbv2y26" alt="Twitter" class="logo"></a></span>
+                <span><a href="https://www.youtube.com/channel/UC2x7DxsTyZj7XBa3hlLVPCQ" target="_blank"><img
+                            src="https://tinyurl.com/6prhybpu" alt="Youtube" class="logo"
+                            style="border-radius: 40px;"></a></span>
+            </div>
+            <script>
+                function toggleLogoes() {
+                    var logosDiv = document.getElementById("logoes");
+                    if (logosDiv.style.display === "none") {
+                        logosDiv.style.display = "block";
+                    } else {
+                        logosDiv.style.display = "none";
+                    }
+                }
+            </script>
+
+        </div>
+    </div>
+    <div class="navbg">
+        <div class="head">
+            <span>
+                <img src="http://tinyurl.com/2p937y4n" alt="navim" id="logo">
+            </span>
+        </div>
+        <nav>
+            <ul>
+                <li class="link"><a href="/index">Home </a></li>
+                <li class="link"><a href="/about">About us </a></li>
+                <li class="link"><a href="/contact">Contact us</a></li>
+                <li class="link"><a href="/register">Register</a></li>
+
+                <li onclick="toggleLogos()" class="link">Login</li>
+                <div id="logos" style="display: none;">
+                    <div><a href="/login">> User Login</a></div>
+                    <div><a href="../admin/login.ejs">> Asha Login</a></div>
+                </div>
+                <script>
+                    function toggleLogos() {
+                        var logosDiv = document.getElementById("logos");
+                        if (logosDiv.style.display === "none") {
+                            logosDiv.style.display = "block";
+                        } else {
+                            logosDiv.style.display = "none";
+                        }
+                    }
+                </script>
+            </ul>
+
+        </nav>
+    </div>
+</body>
+
+</html>

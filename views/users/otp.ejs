@@ -1,0 +1,140 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number verification With OTP</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 302px;
+            height: 175px;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            margin: auto;
+        }
+
+        #number,
+        #verificationcode {
+            width: 97%;
+            padding: 10px;
+            font-size: 20px;
+            margin-left: 3px;
+            margin-bottom: 2px;
+            margin-top: 5px;
+            outline: none;
+            background-color: rgb(230, 207, 252);
+        }
+
+        #recaptcha-container {
+            margin-bottom: 2px;
+        }
+
+        #send,
+        #verify {
+            width: 50%;
+            height: 40px;
+            outline: none;
+            margin-top: 71px;
+            margin-left: 74px;
+            font-size: 20px;
+            font-weight: bold;
+            background: linear-gradient(90deg, rgb(157, 65, 255), white);
+            border-radius: 5px;
+        }
+
+        .p-conf,
+        .n-conf {
+            width: calc(100% - 22px);
+            border: 2px solid rgb(201, 71, 253);
+            border-radius: 4px;
+            padding: 8px 10px;
+            margin: 4px 0px;
+            background-color: rgba(230, 112, 241, 0.739);
+            display: none;
+        }
+
+        .n-conf {
+            border-color: rgb(124, 4, 147);
+            background-color: rgba(230, 112, 241, 0.739);
+        }
+
+        #bg {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div><img src="https://tinyurl.com/5393jpm4" alt="bgimg" id="bg"></div>
+
+
+    <div class="container">
+        <div id="sender" style="display: block;">
+            <input type="text" id="number" placeholder="+9123..">
+            <div id="recaptcha-container"></div>
+            <input type="button" id="send" value="Send" onclick="phoneAuth()">
+        </div>
+        <div id="verifier" style="display: none;">
+            <input type="text" id="verificationcode" placeholder="OTP Code">
+            <input type="button" id="verify" value="Verify" onclick="codeverify()">
+            <div class="p-conf">Number Verified</div>
+            <div class="n-conf">OTP ERROR</div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script>
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAE48wiFn6EFOugqrqDyAt-JzAX2rKvrmE",
+            authDomain: "minor-project-97765.firebaseapp.com",
+            projectId: "minor-project-97765",
+            storageBucket: "minor-project-97765.appspot.com",
+            messagingSenderId: "675361945576",
+            appId: "1:675361945576:web:88d351c26b9136b4df565d",
+            measurementId: "G-M1TG77TQ99"
+        };
+        firebase.initializeApp(firebaseConfig);
+        render();
+        function render() {
+            window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+            recaptchaVerifier.render();
+        }
+        function phoneAuth() {
+            var number = document.getElementById('number').value;
+            firebase.auth().signInWithPhoneNumber(number,
+                window.recaptchaVerifier).then(function (confirmationResult) {
+                    window.confirmationResult = confirmationResult;
+                    coderesult = confirmationResult;
+                    document.getElementById('sender').style.display = 'none';
+                    document.getElementById('verifier').style.display = 'block';
+                }).catch(function (error) {
+                    alert(error.message);
+                });
+        }
+
+        function codeverify() {
+            var code = document.getElementById('verificationcode').value;
+            coderesult.confirm(code).then(function () {
+                window.location.href = '/register';
+                // document.getElementsByClassName('p-conf')[0].style.display = 'block';
+                // reder('register');
+                // document.getElementsByClassName('n-conf')[0].style.display = 'none';
+            }).catch(function () {
+                document.getElementsByClassName('p-conf')[0].style.display = 'none';
+                document.getElementsByClassName('n-conf')[0].style.display = 'block';
+
+            })
+        }
+    </script>
+</body>
+
+</html>

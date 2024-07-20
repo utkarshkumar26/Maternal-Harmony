@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veify</title>
+    <%- include('../layouts/header.ejs') %>
+        <link rel="stylesheet" href="css/stylesVerify.css">
+        <style>
+            #sendlink {
+                padding: 10px;
+                color: black;
+            }
+
+            #emailbg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                /* Ensure the background image is behind other content */
+                z-index: -1;
+                position: fixed;
+            }
+
+            .boxs {
+                position: relative;
+                /* Ensure the content is positioned relative to its container */
+                z-index: 1;
+                /* Ensure the content is above the background image */
+            }
+
+            h2 {
+                position: fixed;
+                left: 560px;
+                top: 200px;
+            }
+        </style>
+</head>
+
+<body>
+    <% if(typeof message !=='undefined' ){ %>
+        <h2>
+            <%= message %>
+        </h2>
+        <% } %>
+            <div>
+                <img src="https://tinyurl.com/bdruaffs" alt="emailverify" id="emailbg">
+            </div>
+
+            <div class="boxs">
+                <form action="/AgainuserVericationMail" method="post">
+                    <input type="email" name="email" required placeholder="Enter your Email">
+
+                    <input type="submit" value="Send verification Link" id="sendlink">
+                </form>
+            </div>
+</body>
+
+</html>

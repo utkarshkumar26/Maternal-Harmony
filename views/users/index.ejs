@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Pregnancy Support - Home</title>
+    <%- include('../layouts/header.ejs') %>
+
+        <style>
+            #bgimage {
+                position: absolute;
+                top: 89px;
+                left: 0;
+                width: 100%;
+                height: 84%;
+                z-index: -1;
+                /* position: fixed; */
+            }
+
+            #userDetails {
+                position: relative;
+                /* Ensure the content is positioned relative to its container */
+                z-index: 1;
+                /* Ensure the content is above the background image */
+                margin-top: 80px;
+            }
+        </style>
+</head>
+
+<body>
+
+    <div>
+        <img src="http://tinyurl.com/4x6ka3u9" alt="bgimage" id="bgimage">
+    </div>
+
+
+    <div class="main_lead">
+
+        <div class="down_lr">
+            <div class="left">
+                <p>This website provides support and resources for pregnant women in need.</p>
+                <p>Get started by <a href="/register">Register for USER</a> or <a href="/login">Login for USER</a> or
+                    <a href="../admin/login.ejs">Asha Login</a>
+                </p>
+            </div>
+
+            <div class="right">
+                <p>"A mother does not become pregnant in order to provide employment to medical people. Giving birth is
+                    an
+                    ecstatic jubilant adventure not available to males. It is a woman’s crowning creative experience of
+                    a
+                    lifetime." - John Stevenson</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p style="text-align:center" class="foot">&copy; 2024 Pregnancy Support</p>
+    </footer>
+
+</body>
+
+</html>

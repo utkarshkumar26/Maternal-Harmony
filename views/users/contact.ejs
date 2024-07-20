@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background-color: rgb(254, 244, 244);
+            margin-right: -60px;
+        }
+
+        #bg1 {
+            height: 400px;
+            width: 100%;
+            position: relative;
+        }
+
+        #maam {
+            width: 460px;
+            height: 170px;
+            border: 5px solid black;
+            background-color: antiquewhite;
+            position: relative;
+            top: -200px;
+            left: 810px;
+        }
+
+        #maamdoc {
+            position: relative;
+            left: 50px;
+            top: 25px;
+
+        }
+
+        #maamimage {
+            height: 150px;
+            width: 140px;
+            position: relative;
+            left: 300px;
+            top: -114px;
+            border: 5px solid black;
+        }
+
+        .contact-details {
+            background: linear-gradient(90deg, white, rgb(250, 158, 211));
+            width: 100%;
+            height: 640px;
+            display: flex;
+            flex-direction: column;
+            margin-top: -160px;
+        }
+
+        .container {
+            max-width: 600px;
+            height: 470px;
+            background: linear-gradient(45deg, rgb(63, 207, 254), white);
+            border-radius: 5px;
+            position: relative;
+            left: 280px;
+            top: 20px;
+            padding: 50px;
+            font-weight: bold;
+        }
+
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            text-decoration: underline;
+        }
+
+
+
+        #feedback {
+            width: 594px;
+            border-radius: 8px;
+
+        }
+
+        #submit {
+            background-color: #59c4fe;
+            color: #130c0c;
+            height: 30px;
+            width: 80px;
+            padding: 2px 2px;
+            border-radius: 15px;
+            border: 2px solid black;
+            margin-left: 273px;
+            margin-top: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 30px;
+            margin-top: -20px;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 2px;
+            margin-top: 34px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #0e0909;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        #image {
+            width: 100%;
+            height: 100%;
+            margin-top: 40px;
+
+        }
+
+        h3 {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 40px;
+            margin-top: -20px;
+        }
+
+        #bottomcon {
+            max-width: 600px;
+            height: 470px;
+            background: linear-gradient(45deg, rgb(250, 160, 235), rgb(125, 196, 254));
+            border-radius: 5px;
+            position: relative;
+            left: 500px;
+            bottom: 640px;
+            padding: 50px;
+            font-weight: bold;
+        }
+
+        input[type="date"] {
+            padding: 10px;
+            border: 1px solid #0e0909;
+            border-radius: 5px;
+        }
+
+        #rating2 {
+            margin-left: 30px;
+        }
+
+        #rating3 {
+            margin-left: 30px;
+        }
+
+        #rating4 {
+            margin-left: 30px;
+        }
+
+        #rating5 {
+            margin-left: 30px;
+        }
+
+
+        #submitForm1 {
+            background-color: #1cb6e4;
+            color: #130c0c;
+            height: 30px;
+            width: 160px;
+            padding: 2px 2px;
+            border-radius: 15px;
+            border: 2px solid black;
+            margin-left: 230px;
+            margin-top: 28px;
+        }
+
+        #submitForm2 {
+            background-color: #e483ff;
+            color: #130c0c;
+            height: 30px;
+            width: 160px;
+            padding: 2px 2px;
+            border-radius: 15px;
+            border: 2px solid black;
+            margin-left: 230px;
+            margin-top: 20px;
+        }
+
+
+
+
+        #riyadoc {
+            position: relative;
+            left: 40px;
+            top: 20px;
+        }
+
+        #riyaimage {
+            height: 150px;
+            width: 140px;
+            border: 5px solid black;
+            position: relative;
+            right: 21px;
+        }
+
+        #ankitdoc {
+            position: relative;
+            left: 70px;
+            top: 20px;
+
+        }
+
+        #ankitimage {
+            height: 150px;
+            width: 140px;
+            border: 5px solid black;
+        }
+
+        #swatidoc {
+            position: relative;
+            left: 40px;
+            top: 20px;
+        }
+
+        #swatiimage {
+            height: 150px;
+            width: 140px;
+            border: 5px solid black;
+            position: relative;
+            right: 21px;
+        }
+
+        #prakhardoc {
+            position: relative;
+            left: 70px;
+            top: 20px;
+
+        }
+
+        #prakharimage {
+            height: 150px;
+            width: 140px;
+            border: 5px solid black;
+        }
+
+        #ariondoc {
+            position: relative;
+            left: 160px;
+            top: 9px;
+        }
+
+        #arionimage {
+            height: 150px;
+            width: 140px;
+            position: relative;
+            right: 100px;
+            border: 5px solid black;
+        }
+
+
+        #upper {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #middle {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #lower {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #last {
+            height: 300px;
+        }
+
+
+        #top {
+            background-image: linear-gradient(45deg, rgb(235, 97, 38), rgb(236, 120, 188));
+            padding: 8px;
+            height: 35px;
+            width: 98.9%;
+            position: relative;
+            top: -5px;
+            z-index: 1;
+
+        }
+
+        #flag {
+            color: aliceblue;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flagimage {
+            padding: 3px;
+            height: 28px;
+            width: 40px;
+            position: absolute;
+            top: 9px;
+        }
+
+        .flagtext {
+            position: absolute;
+            left: 60px;
+            top: -5px;
+        }
+
+        .upper {
+            position: absolute;
+            right: 35px;
+            top: 11px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 180px;
+        }
+
+        .follow {
+            height: 55px;
+            width: 55px;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 40px;
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+
+        #logos {
+            margin-top: 40px;
+            background-color: rgb(239, 126, 194);
+            height: 180px;
+            width: 50px;
+            z-index: 0;
+            margin-right: 23px;
+        }
+
+        .langu {
+            height: 55px;
+            width: 55px;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            top: -12px;
+            right: 260px;
+        }
+
+
+        #goback {
+            font-size: 20px;
+            color: rgb(18, 21, 21);
+            margin-left: -900px;
+            position: relative;
+            bottom: -470px;
+            text-decoration: none;
+        }
+
+        #last {
+            top: 500px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+
+    <div id="top">
+        <div id="flag">
+            <span>
+                <img src="https://static.mygov.in/innovateindia/images/flag.jpg" alt="image" class="flagimage">
+            </span>
+            <span>
+                <h4 class="flagtext">GOVERNMENT OF INDIA</h4>
+            </span>
+        </div>
+        <div class="upper">
+            <span><img src="http://tinyurl.com/mr28sky4" alt="image" class="langu"></span>
+            <span class="other">
+                <!-- Add this script at the beginning of your <body> tag -->
+                <div id="google_translate_element" style="position: absolute; top: 1px; right: 100px; z-index: 9999;">
+                </div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                            pageLanguage: 'en',
+                            includedLanguages: 'hi,bn,or,ur',
+                            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                            autoDisplay: false
+                        }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                    </script>
+
+
+                <img src="http://tinyurl.com/bdfrhnpn" onclick="toggleLogos()" alt="follow" class=follow>
+                <div class="right" id="logos" style="display: none;">
+                    <span><a href="https://www.facebook.com/KIITUniversity" target="_blank"><img
+                                src="https://tinyurl.com/2ewyx25z" alt="facebook" class="logo"></a></span>
+                    <span><a href="https://www.instagram.com/KIITUniversity/" target="_blank"><img
+                                src="https://tinyurl.com/5bwus5sv" alt="Instagram" class="logo"
+                                style="border-radius: 30px;"></a></span>
+                    <span><a href="https://twitter.com/KIITUniversity" target="_blank"><img
+                                src="https://tinyurl.com/wxbv2y26" alt="Twitter" class="logo"></a></span>
+                    <span><a href="https://www.youtube.com/channel/UC2x7DxsTyZj7XBa3hlLVPCQ" target="_blank"><img
+                                src="https://tinyurl.com/6prhybpu" alt="Youtube" class="logo"
+                                style="border-radius: 40px;"></a></span>
+                </div>
+                <script>
+                    function toggleLogos() {
+                        var logosDiv = document.getElementById("logos");
+                        if (logosDiv.style.display === "none") {
+                            logosDiv.style.display = "block";
+                        } else {
+                            logosDiv.style.display = "none";
+                        }
+                    }
+                </script>
+
+        </div>
+    </div>
+
+
+    <div><img src="imagesContact/bg1.jpg" alt="bg1" id="bg1"></div>
+
+    <div id="maam">
+        <div id="maamdoc">
+            <p><b>Name:</b> JUNALI JASMINE MA'AM</p>
+            <p><b>Email</b>: junali.jenafcs@kiit.ac.in</p>
+            <p><b>Phone</b>: 7205397792</p>
+        </div>
+        <div>
+            <img src="imagesContact/maam.jpg" alt="maamimage" id="maamimage">
+        </div>
+    </div>
+
+
+    <div class="contact-details">
+
+        <h1>Contact Details</h1>
+
+
+        <div id="upper">
+            <div id="riyadoc">
+                <p><b>Name:</b> RIYA CHANDA</p>
+                <p><b>Email</b>: 21052711@kiit.ac.in</p>
+                <p><b>Phone</b>: 8709561491</p>
+            </div>
+            <div>
+                <img src="imagesContact/riya.jpg" alt="riyaimage" id="riyaimage">
+            </div>
+            <div id="ankitdoc">
+                <p><b>Name</b>:ANKIT KUMAR</p>
+                <p><b>Email</b>:21052565@kiit.ac.in</p>
+                <p><b>Phone</b>:6203619212</p>
+            </div>
+            <div>
+                <img src="imagesContact/ankit.jpg" alt="ankitimage" id="ankitimage">
+            </div>
+        </div>
+
+        <div id="middle">
+            <div id="swatidoc">
+                <p><b>Name</b>: SWATI MEHTA</p>
+                <p><b>Email:</b>:21052717@kiit.ac.in</p>
+                <p><b>Phone</b>:9065509205</p>
+            </div>
+            <div>
+                <img src="imagesContact/swati.jpg" alt="swatiimage" id="swatiimage">
+            </div>
+            <div id="prakhardoc">
+                <p><b>Name</b>: PRAKHAR PARTH</p>
+                <p><b>Email</b>:21052514@kiit.ac.in</p>
+                <p><b>Phone</b> :9142643028</p>
+            </div>
+            <div>
+                <img src="imagesContact/prakhar.jpg" alt="prakharimage" id="prakharimage">
+            </div>
+        </div>
+
+        <div id="lower">
+            <div id="ariondoc">
+                <p><b>Name</b>: ARION LEONEL BAROL </p>
+                <p><b>Email</b>:2105677@kiit.ac.in</p>
+                <p><b>Phone </b>:7846957116</p>
+            </div>
+            <div>
+                <img src="imagesContact/ariyon.jpg" alt="arionimage" id="arionimage">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- First form -->
+    <div class="container">
+        <h2>Ask how we can help you</h2>
+        <form id="form1">
+            <div class="field">
+                <label for="from_name">Name</label>
+                <input type="text" name="from_name" id="from_name" required>
+            </div>
+            <div class="field">
+                <label for="email_id">Email</label>
+                <input type="email" name="email_id" id="email_id" required>
+            </div>
+            <div class="field">
+                <label for="Mobile_No">Mobile Number</label>
+                <input type="tel" name="Mobile_No" id="number" required>
+            </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="feedback" rows="5" required></textarea>
+            </div>
+            <div>
+                <button type="submit" id="submitForm1">Send</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Second form -->
+    <div id="last">
+        <div>
+            <img src="https://tinyurl.com/4enzxz6u" alt="img" id="image">
+        </div>
+
+        <div id="bottomcon">
+            <h3>Patient Feedback Form</h3>
+            <form id="form2">
+                <div class="form-group">
+                    <label for="patient_name">Patient Name</label>
+                    <input type="text" name="patient_name" id="patient_name" placeholder="Enter your name (optional)">
+                </div>
+                <div class="form-group">
+                    <label for="visitDate">Date of Visit *</label>
+                    <input type="date" name="visitDate" id="visitDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Feedback *</label>
+                    <textarea name="message" id="feedback" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rate your experience (1-5):</label>
+                    <br>
+                    <input type="radio" name="rating" id="rating1" value="1"> 1
+                    <input type="radio" name="rating" id="rating2" value="2"> 2
+                    <input type="radio" name="rating" id="rating3" value="3"> 3
+                    <input type="radio" name="rating" id="rating4" value="4"> 4
+                    <input type="radio" name="rating" id="rating5" value="5"> 5
+                </div>
+                <button type="submit" id="submitForm2">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Your existing JavaScript code here -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('U_aDcn5sNTgAhlcvj');
+        })();
+    </script>
+    <script>
+        // Form 1 submission
+        document.getElementById('form1').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            SendForm1(); // Call the SendForm1 function to handle the form submission
+        });
+
+        // Function to handle form submission for the first form
+        function SendForm1() {
+            var params = {
+                from_name: document.getElementById("from_name").value,
+                email_id: document.getElementById("email_id").value,
+                Mobile_No: document.getElementById("number").value,
+                message: document.getElementById("feedback").value
+            };
+
+            emailjs.send("service_0dstbhv", "template_6bkor0p", params)
+                .then(function (res) {
+                    alert("Success! Your message has been sent."); // Alert success message
+                })
+                .catch(function (error) {
+                    console.error('Error sending email:', error); // Log any errors to the console
+                    alert("There was an error sending your message. Please try again later."); // Alert error message
+                });
+        }
+
+        // Form 2 submission
+        document.getElementById('form2').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            SendForm2(); // Call the SendForm2 function to handle the form submission
+        });
+
+        // Function to handle form submission for the second form
+        function SendForm2() {
+            var params = {
+                patient_name: document.getElementById("patient_name").value,
+                visitDate: document.getElementById("visitDate").value,
+                message: document.getElementById("feedback").value, // Update ID to "feedback"
+                rating: document.querySelector('input[name="rating"]:checked').value
+            };
+
+            emailjs.send("service_cpajq6l", "template_8ou1ttb", params)
+                .then(function (res) {
+                    alert("Success! Your message has been sent."); // Alert success message
+                })
+                .catch(function (error) {
+                    console.error('Error sending email:', error); // Log any errors to the console
+                    alert("There was an error sending your message. Please try again later."); // Alert error message
+                });
+        }
+
+    </script>
+
+
+    <!-- Your additional HTML content here -->
+    <div>
+        <h2 id="goback"><a href="/index" style="text-decoration: none; color: black;">*Click here to Go to Home
+                Page*</a>
+        </h2>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Pregnancy Support </title>
+    <%- include('../layouts/header.ejs') %>
+        <style>
+            #userDetails {
+                margin-top: 80px;
+            }
+        </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <img src="userImages/<%= user.image %>" alt="Network Error" height="50px" width="50px">
+    </div>
+    <center>
+        <section id="userDetails">
+            <div class="border">
+                <fieldset>
+                    <h2><u>Edit Your Profile</u></h2>
+                    <form action="/edit" method="POST" enctype="multipart/form-data">
+                        <div>
+                            <label for="Name"><strong>Enter your Name</strong></label>
+                            <input type="text" id="First_Name" name="name" placeholder="Enter your Name *" required
+                                value="<%=user.name %>" />
+                        </div>
+                        <br>
+                        <div><br>
+                            <label for="Email"><strong>Email:</strong></label>
+                            <input type="Email" id="Email" value="<%=user.email%>" name="email" required />
+                        </div><br>
+                        <!-- <div>
+                            <label for="Age"><strong>Age:</strong></label>
+                            <input type="number" id="age" name="age" value="" required />
+                        </div> -->
+                        <div><br>
+                            <label for="Phone Number"><strong>Number:</strong></label>
+                            <input type="text" id="Phone number" name="mobile" required value="<%=user.mobile%>" />
+                        </div>
+                        <div><br>
+                            <label for="image">Choose Profile Image:</label>
+                            <input type="file" name="image" id="imag">
+                        </div>
+                        <input type="hidden" name="user_id" value="<%=user._id%>">
+                        <br>
+                        <div>
+                            <label for="password"><strong>Password:</strong></label>
+                            <input type="password" id="password" placeholder="password *" value="<%=user.password%>"
+                                name="password" required />
+                        </div>
+                        <!-- <div>
+                            <label for="Confirm password"><strong>Confirm Password:</strong></label>
+                            <input type="password" id="password" placeholder="Confirm Password *" value=""
+                                name="confirmpassword" />
+                        </div> -->
+                        <br>
+                        <input type="submit" name="btnRegister" value="UpdateProfile">
+                    </form>
+                </fieldset>
+            </div>
+        </section>
+        <% if(typeof message !=='undefined' ) { %>
+            <p style="color: green;">
+                <%= message %>
+            </p>
+            <% } %>
+    </center>
+    </main>
+</body>
+
+</html>
