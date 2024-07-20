@@ -1,0 +1,172 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('../layouts/header.ejs') %>
+
+        <!-- <link rel="stylesheet" href="css/styles.css"> -->
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .left1 {
+                flex: 1;
+                text-align: left;
+                padding: 20px;
+                position: absolute;
+                top: 50%;
+                left: 2%;
+                border: 2px solid red;
+            }
+
+            .middle {
+                flex: 1;
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;
+                position: absolute;
+                top: 48%;
+                left: 45%;
+            }
+
+            .right1 {
+                flex: 1;
+                text-align: right;
+                padding: 20px;
+                position: absolute;
+                top: 50%;
+                right: 3%;
+                border: 2px solid red;
+            }
+
+            .box1 {
+                margin: auto;
+            }
+
+            #userbg {
+                height: 81.9vh;
+                width: 100vw;
+            }
+
+
+            .box2 {
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+
+                background: #232121;
+
+
+                width: 380px;
+                padding: 20px;
+                position: absolute;
+
+                top: 60%;
+                left: 25%;
+                color: white;
+                transform: translate(-50%, -50%);
+                background: #191919;
+                text-align: center;
+                border-radius: 80em;
+                box-shadow: 5px 5px 50px 50px rgba(252, 5, 5, 0.699);
+                animation: animateBg 5s linear infinite;
+            }
+
+            @keyframes animateBg {
+                100% {
+                    filter: hue-rotate(360deg);
+                }
+            }
+
+            .box2 input {
+                border: 0;
+                background: none;
+                display: block;
+                margin: 20px auto;
+                text-align: center;
+                border: 3px solid #0399fd;
+                padding: 14px 10px;
+                width: 200px;
+                outline: none;
+                color: white;
+                border-radius: 50px;
+                transition: 0.25s;
+            }
+
+            .box2 input[type="text"]:focus,
+            .box2 input[type="password"]:focus {
+                width: 280px;
+                border-color: #04fb6b;
+            }
+
+            .box2 input[type="submit"] {
+                border: 0;
+                background: none;
+                display: block;
+                margin: 20px auto;
+                text-align: center;
+                font-size: 100%;
+                border: 3px solid #04fb6b;
+                padding: 14px 40px;
+                outline: none;
+                color: white;
+                border-radius: 24px;
+                transition: 0.25s;
+                cursor: pointer;
+            }
+
+            .box2 input[type="submit"]:hover {
+                background: #04fb6b;
+            }
+
+            #userverify {
+                color: white;
+            }
+
+            h3 {
+                position: fixed;
+                left: 680px;
+                top: 170px;
+                font-size: 30px;
+            }
+        </style>
+</head>
+
+<body>
+    <div>
+        <img src="https://tinyurl.com/2xfhma7v" alt="userbg" id="userbg">
+    </div>
+
+    <% if(typeof message !=='undefined' ) { %>
+        <h3 style="color: rgb(93, 29, 232);">
+            <%= message %>
+        </h3>
+        <% } %>
+
+            <div class="box1">
+                <form action="/login" method="POST">
+                    <div class="box2">
+                        <h1><u>USER LOGIN</u></h1>
+                        <input type="text" name="email" placeholder="Username">
+                        <input type="password" name="password" placeholder="Password">
+                        <input type="submit" name="btnRegister" value="Submit">
+                        <h2><a href="/AgainuserVericationMail" id="userverify">Verify Your Account</a></h2>
+                    </div>
+                </form>
+            </div>
+</body>
+
+</html>

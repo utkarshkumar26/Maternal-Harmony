@@ -1,0 +1,64 @@
+.boxs {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 160px;
+    width: 238px;
+    padding: 10px;
+    position: relative;
+    top: 28%;
+    left: 18.2%;
+    color: black;
+    transform: translate(-50%, -50%);
+    background: #6dffce;
+    text-align: center;
+    border-radius: 10px;
+    animation: animateBg 5s linear infinite;
+}
+
+@keyframes animateBg {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.boxs input {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #0399fd;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: black;
+    border-radius: 50px;
+    transition: 0.25s;
+}
+
+.boxs input[type="text"]:focus,
+.boxs input[type="password"]:focus {
+    width: 280px;
+    border-color: #04fb6b;
+}
+
+.boxs input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 100%;
+    border: 3px solid #04fb6b;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.boxs input[type="submit"]:hover {
+    background: #04fb6b;
+}

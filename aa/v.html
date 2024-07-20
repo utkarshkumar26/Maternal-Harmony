@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Pregnancy Support </title>
+    <%- include('../layouts/header.ejs') %>
+        <style>
+            #bgimage {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+
+            #userDetails {
+                position: relative;
+                /* Ensure the content is positioned relative to its container */
+                z-index: 1;
+                /* Ensure the content is above the background image */
+                margin-top: 80px;
+            }
+
+            #otp {
+                font-size: 11.2px;
+                font-size: 13.9px;
+                color: rgb(210, 251, 251);
+                font-weight: bold;
+                text-decoration: underline;
+                margin-right: -2px;
+            }
+
+            .Fverify {
+                font-size: 11.2px;
+                font-size: 15px;
+                color: rgb(30, 45, 45);
+                font-weight: bold;
+                text-decoration: underline;
+
+            }
+        </style>
+
+</head>
+
+<body>
+    <div>
+        <img src="https://tinyurl.com/3ua7tju2" alt="bgimage" id="bgimage">
+    </div>
+    <center>
+        <% if(typeof message !=='undefined' ) { %>
+            <p style="color: rgb(1, 8, 1);">
+                <%= message %>
+            </p>
+            <% } %>
+                <section id="userDetails">
+                    <div>
+                        <fieldset>
+                            <h2><u>Registration</u></h2>
+
+                            <form action="/register" method="POST" enctype="multipart/form-data">
+
+                                
+
+                                <div>
+                                    <a href="http://127.0.0.1:5001/" class="Fverify"  id="face-verify-btn" >Click here to Verify your Face *</a>
+                                </div>
+                                <br>
+
+                                <div>
+                                    <input type="text" id="First_Name" name="name" placeholder="Enter Name *" required
+                                        value="" />
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="Email" id="Email" value="" name="email"
+                                        placeholder="Enter Email Address *" required />
+                                </div><br>
+                                <div>
+                                    <label for="Dob"><strong>Date of Birth *</strong></label>
+                                    <input type="date" id="" placeholder="DOB *" required value="" />
+                                </div>
+                                <div><br>
+                                    <select name="country code" id="">
+
+                                        <option value="India">+91</option>
+                                        <option value="Afganistan">+93</option>
+                                        <option value="Pakistan">+92</option>
+                                        <option value="Nepal">+977</option>
+                                    </select>
+
+                                    <input type="number" id="Phone number" name="mobile"
+                                        placeholder="Enter Moblie Number *" required value="" />
+                                </div>
+                                <br>
+                                <div>
+                                    <a href="/otp" id="otp">Verify your Mobile Number *</a>
+                                    <input type="text" placeholder="Enter OTP *" required>
+                                </div>
+                                <br>
+                                <div>
+                                    <select name="State" id="state" required>
+                                        <option value="select state">Select State *</option>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                        <option value="Assam">Assam</option>
+                                        <option value="Bihar">Bihar</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Delhi">Delhi</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Haryana">Haryana</option>
+                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                        <option value="Jharkhand">Jharkhand</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Manipur">Manipur</option>
+                                        <option value="Meghalaya">Meghalaya</option>
+                                        <option value="Mizoram">Mizoram</option>
+                                        <option value="Nagaland">Nagaland</option>
+                                        <option value="Odisha">Odisha</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Sikkim">Sikkim</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Telangana">Telangana<T /option>
+                                        <option value="Tripura">Tripura</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="Uttarakhanda">Uttarakhanda</option>
+                                        <option value="West Bengal">West Bengal</option>
+                                    </select>
+                                    <input type="text" id="address" name="Address" placeholder="Enter Address *"
+                                        required value="" />
+
+                                </div><br>
+                                <div>
+                                    <input type="text" id="district" name="District" placeholder="Enter District *"
+                                        required value="" />
+                                    <input type="text" id="pincode" name="Pin code" placeholder="Enter Pincode *"
+                                        required value="" />
+                                </div>
+                                <br>
+
+                                <div>
+                                    <input type="password" id="password" placeholder="Enter Password *" value=""
+                                        name="password" required />
+                                    <input type="password" id="cpassword" placeholder="Confirm Password *" value=""
+                                        name="confirmpassword" required />
+                                </div><br>
+                                <div>
+                                    <label for="Pregnancy month"><strong>Month of Pregnancy * </strong></label>
+                                    <select name="month" required>
+                                        <option value=" "> </option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                </div>
+
+
+
+                                <div><br>
+                                    <label for="image">Choose Profile Image:</label>
+                                    <input type="file" name="image" id="imag" required>
+                                </div>
+
+
+                                <br>
+                                <!-- <center><input type="submit" name="btnRegister" value="Submit" class="submit"></center> -->
+                                <center><button id="submit-btn" type="submit"  name="btnRegister" value="Submit" class="submit" style="cursor: pointer;"> Register</button></center>
+
+                            </form>
+                        </fieldset>
+                    </div>
+                </section>
+    </center>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- <script>
+  $(document).ready(function() {
+    const faceVerifyBtn = $('#face-verify-btn');
+    const submitBtn = $('#submit-btn');
+
+    // Click event for face verification button
+    faceVerifyBtn.on('click', function() {
+        // Placeholder logic to open face recognition tab and verify face
+        // Once face is verified, enable the submit button
+        submitBtn.prop('disabled', false);
+        alert('Please register yourself in face recognition');
+    });
+
+    // Prevent form submission if submit button is disabled
+    $('#registration-form').submit(function(event) {
+        if (submitBtn.is(':disabled')) {
+            event.preventDefault();
+        }
+    });
+});
+
+</script> -->
+
+
+</body>
+
+</html>

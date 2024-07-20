@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+#userDetails {
+    text-align: left;
+    border-top: 6px solid goldenrod;
+    border-right: 6px solid red;
+    border-left: 6px solid rgb(134, 3, 148);
+    border-bottom: 6px solid rgb(130, 82, 9);
+    width: 422px;
+    position: relative;
+    top: -50px;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px;
+    size: 60px;
+    color: aqua;
+}
+
+#login {
+    text-align: center;
+}
+
+.submit {
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 12px;
+    color: white;
+    background-color: #0399fd;
+    border: 2px solid rgb(36, 204, 234);
+}
+
+#bgimage {
+    height: 100vh;
+    width: 100vw;
+    /* position: fixed; */
+    position: absolute;
+    /* bottom: 8px; */
+
+}
+
+
+h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+fieldset {
+    /* position: relative; */
+    margin-left: -2px;
+    width: 399px;
+    color: aliceblue;
+    background: linear-gradient(45deg, rgb(18, 89, 212), rgb(70, 181, 70));
+    font-size: 15px;
+    padding-top: -5px;
+}
+
+#heading {
+    border: 3px solid blueviolet;
+    background-image: linear-gradient(45deg, yellow, rgb(0, 255, 242));
+    width: 600px;
+    height: 110px;
+    border-radius: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 120px;
+
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+
+.login {
+    border: 6px solid yellow;
+    width: 430px;
+}
+
+/* button {
+    border: 3px solid orchid;
+    border-radius: 10px;
+    font-weight: bold;
+} */
+
+#image {
+    width: 130px;
+    height: 110px;
+}
+
+
+
+.box {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+    background: #232121;
+
+
+    width: 380px;
+    padding: 20px;
+    position: fixed;
+
+    top: 64%;
+    left: 16.8%;
+    color: white;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;
+    border-radius: 80em;
+    box-shadow: 5px 5px 50px 50px rgba(252, 5, 5, 0.699);
+    animation: animateBg 5s linear infinite;
+}
+
+@keyframes animateBg {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.box input {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #0399fd;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 50px;
+    transition: 0.25s;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    width: 280px;
+    border-color: #04fb6b;
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 100%;
+    border: 3px solid #04fb6b;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover {
+    background: #04fb6b;
+}
+
+#First_Name {
+    height: 25px;
+    width: 370px;
+    font-size: 16px;
+
+}
+
+#Email {
+    height: 25px;
+    width: 370px;
+    font-size: 16px;
+
+}
+
+#state {
+    height: 30px;
+}
+
+#address {
+    height: 25px;
+    width: 190px;
+    margin-left: 30px;
+}
+
+#district {
+    height: 25px;
+    width: 135px;
+}
+
+#pincode {
+    height: 25px;
+    width: 192px;
+    margin-left: 30px;
+}
+
+#cpassword {
+    width: 193px;
+    margin-left: 3px;
+}
